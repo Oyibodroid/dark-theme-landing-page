@@ -1,0 +1,368 @@
+:root {
+    --Dark-Blue-intro-and-email-sign-up-background: hsl(217, 28%, 15%);
+    --Dark-Blue-main-background: hsl(218, 28%, 13%);
+    --Dark-Blue-footer-background: hsl(216, 53%, 9%);
+    --Dark-Blue-testimonials-background: hsl(219, 30%, 18%);
+
+
+    --Cyan: hsl(176, 68%, 64%);
+    --Blue: hsl(198, 60%, 50%);
+    --Light-Red: hsl(0, 100%, 63%);
+
+
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--White);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 5vw;
+}
+
+#logo-cnt {
+    width: 8rem;
+}
+
+#logo-cnt img {
+    width: 100%;
+}
+
+nav a {
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+nav a::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: var(--White);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+
+#top {
+    background-color: var(--Dark-Blue-intro-and-email-sign-up-background);
+}
+
+.top {
+    text-align: center;
+    padding: 5vh 8vw;
+    background: url('./images/bg-curvy-desktop.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw;
+}
+
+.top h1 {
+    font-size: 2rem;
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+.top-cnt {
+    margin: 0 15vw;
+}
+
+.top-cnt p {
+    padding: 0 6rem;
+    line-height: 1.5;
+}
+
+.top-cnt button {
+    margin: 2rem;
+    padding: .8rem 4rem;
+    color: var(--White);
+    background: linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    border-radius: 50rem;
+    border: none;
+    font-size: 15px;
+    box-shadow: 1px 2px 10px linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+}
+
+.middle {
+    background-color: var(--Dark-Blue-main-background);
+}
+
+.about {
+    width: 100%;
+    padding: 0 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 14px;
+    row-gap: 5vw;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1.5;
+    height: 100%;
+}
+
+.abt-card {
+    width: 30%;
+    text-align: center;
+    margin: 0 3rem;
+}
+
+.abt-card img {
+    margin: 1.5rem;
+}
+
+.abt-card h2 {
+    margin-bottom: .7rem;
+}
+
+#productive {
+    display: flex;
+    align-items: center;
+    margin: 10vh 0;
+    padding: 2vh 5vw;
+    justify-content: space-between;
+}
+
+.productive-content {
+    margin: 2rem;
+    line-height: 1.5;
+}
+
+.productive-content p {
+    margin: 1.5rem 0;
+    font-size: 14px;
+}
+
+.productive-img {
+    width: 80%;
+}
+
+.productive-img img {
+    width: 100%;
+}
+
+.productive-content h1 {
+    font-size: 2rem;
+    padding-right: 40%;
+}
+
+.productive-content h1::after {
+    content: '';
+    height: 2px;
+    width: 50%;
+    background-color: var(--Cyan);
+    border: 1px solid var(--Cyan);
+}
+
+.productive-content a {
+    color: var(--Cyan);
+    line-height: 1.5;
+    display: flex;
+    /* font-size: 14px; */
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    width: fit-content;
+}
+
+
+.productive-content a img {
+    margin-left: .6rem;
+}
+
+
+.productive-content a::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--Cyan);
+}
+
+#testimonial {
+    display: flex;
+    padding: 10vh 8vw;
+}
+
+.testi-row {
+    background: var(--Dark-Blue-testimonials-background);
+    margin: 1rem;
+    padding: 2rem 1rem;
+    line-height: 1.5;
+    box-shadow: 1px 6px 15px hsla(215, 52%, 9%, 0.534);
+    font-size: 14px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0 0;
+}
+
+.profile img {
+    width: 2rem;
+    margin-right: .5rem;
+    border-radius: 50%;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.name span {
+    font-size: .7em;
+    font-weight: 400;
+}
+
+#quote {
+    position: absolute;
+    left: 8%;
+    margin-top: 3rem;
+}
+
+.form {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+#access {
+    margin: 5rem 20vw -6rem;
+    padding: 3rem;
+    background: var(--Dark-Blue-intro-and-email-sign-up-background);
+    line-height: 1.5;
+    border-radius: 6px;
+    box-shadow: 1px 6px 15px hsla(215, 52%, 9%, 0.534);
+    font-size: 14px;
+}
+
+form h1 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.inputs {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    margin-top: 1rem;
+    align-items: flex-start;
+}
+
+.email, #email {
+    width: 100%;
+    padding: 1em;
+    margin-right: 1rem;
+    border-radius: 40px;
+    border: none;
+}
+
+.email{
+    text-align: left;
+}
+
+#error{
+    color: var(--Light-Red);
+    padding:  1rem;
+}
+
+#email:focus {
+    outline: none;
+}
+
+#submit {
+    width: 40%;
+    padding: 1.2em 2rem;
+    margin-top: 12px;
+    border-radius: 40px;
+    border: none;
+    color: var(--White);
+    background: linear-gradient(to right, var(--Cyan), var(--Blue));
+}
+
+footer {
+    background: var(--Dark-Blue-footer-background);
+    padding: 29vh 4vw 10vh;
+}
+
+.footer-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+    align-items: flex-start;
+}
+
+.footer-main div {
+    display: flex;
+    /* width: 20%; */
+    flex-direction: column;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+}
+
+#location {
+    display: block;
+    flex-direction: row;
+}
+
+.footer-main img {
+    margin-right: 1rem;
+}
+
+.footer-main a {
+    line-height: 2;
+    color: var(--White);
+    text-decoration: none;
+}
+
+div.socials {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.socials img {
+    /* width: 100%; */
+    height: 1rem;
+    padding: .8rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+#location{
+    display: flex;
+    align-items: flex-start;
+}
+
+#location-img{
+    padding: 0;
+}
+
+#contact p{
+    line-height: 1.5;
+}
