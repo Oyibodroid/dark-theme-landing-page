@@ -11,6 +11,8 @@
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;600&family=Raleway:wght@400;700&display=swap"
@@ -56,7 +58,7 @@
             you need, share and collaborate with friends family, and co-workers.
           </p>
 
-          <button>Get Started</button>
+          <a href="#access"><button>Get Started</button></a>
         </div>
 
       </section>
@@ -107,9 +109,9 @@
     </section>
 
 
-    <section id="productive">
+    <section class="container-fluid" id="productive">
 
-      <div class="productive-img">
+      <div class="row-1 productive-img">
         <img src="./images/illustration-stay-productive.png" alt="">
       </div>
 
@@ -186,10 +188,8 @@
           </p>
         </div>
         <div class="inputs">
-          <div class="email">
-            <input type="text" name="email" placeholder="email@example.com" id="email">
-            <div id="error"></div>
-          </div>
+          <input type="text" name="email" placeholder="email@example.com" id="email">
+          <div id="error"></div>
 
           <button type="submit" id="submit">Get Started For Free</button>
         </div>
@@ -229,12 +229,20 @@
       </div>
 
       <div class="socials">
-        <img src="./images/facebook-f.svg" id="facebook">
-        <img src="./images/twitter.svg" alt="">
-        <img src="./images/instagram.svg" alt="">
+        <span>
+          <img src="/images/facebook-f.svg" id="facebook">
+        </span>
+
+        <span>
+          <img src="./images/twitter.svg" alt="">
+        </span>
+
+        <span>
+          <img src="./images/instagram.svg" alt="">
+        </span>
       </div>
     </div>
- 
+
     <!-- <div>
       <p class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

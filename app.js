@@ -13,8 +13,8 @@ form.addEventListener('submit', e => {
     } else if (!email.value.includes('@') || !email.value.includes('.com')){
         error.innerHTML = 'please enter a valid email address'
     }else{
-        error.innerHTML = ""
-        
+        error.innerHTML = ""   
+        submit();
     }
 })
 

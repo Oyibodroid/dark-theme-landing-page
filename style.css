@@ -17,11 +17,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
     color: var(--White);
     font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    cursor: pointer;
 }
 
 header {
@@ -39,25 +44,34 @@ header {
     width: 100%;
 }
 
-nav a {
-    margin: 0 1rem;
+nav {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav a {
     position: relative;
     width: fit-content;
     text-decoration: none;
+    font-size: 15px;
     color: white;
     text-align: center;
 }
 
 nav a::after {
     content: "";
-    width: 100%;
+    width: 0;
     height: 1px;
     background: var(--White);
     bottom: 0;
     left: 0;
     position: absolute;
+    transition: width .4s;
+}
+
+nav a:hover::after{
+    width: 100%;
 }
 
 
@@ -74,28 +88,36 @@ nav a::after {
     background-size: 100vw;
 }
 
+.top img {
+    width: 70vw;
+    max-width: 750px;
+}
+
 .top h1 {
-    font-size: 2rem;
-    margin: 2rem;
+    font-size: 1.5rem;
+    margin: 2rem 0;
     line-height: 1.5;
 }
 
 .top-cnt {
-    margin: 0 15vw;
+    width: 70vw;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .top-cnt p {
-    padding: 0 6rem;
+    /* padding: 0 6rem; */
     line-height: 1.5;
 }
 
 .top-cnt button {
-    margin: 2rem;
+    margin: 2rem 0;
     padding: .8rem 4rem;
     color: var(--White);
     background: linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
     border-radius: 50rem;
     border: none;
+    white-space: nowrap;
     font-size: 15px;
     box-shadow: 1px 2px 10px linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
 }
@@ -105,11 +127,12 @@ nav a::after {
 }
 
 .about {
-    width: 100%;
     padding: 0 5vw;
+    margin: 0 5vw;
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
+    justify-content: center;
     row-gap: 5vw;
     align-items: center;
     justify-content: space-around;
@@ -118,7 +141,8 @@ nav a::after {
 }
 
 .abt-card {
-    width: 30%;
+    /* width: 30%; */
+    flex-basis: 300px;
     text-align: center;
     margin: 0 3rem;
 }
@@ -134,13 +158,13 @@ nav a::after {
 #productive {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin: 10vh 0;
-    padding: 2vh 5vw;
-    justify-content: space-between;
 }
 
 .productive-content {
-    margin: 2rem;
+
+    margin: 1rem;
     line-height: 1.5;
 }
 
@@ -150,7 +174,8 @@ nav a::after {
 }
 
 .productive-img {
-    width: 80%;
+    flex-basis: 70%;
+    width: 50vw;
 }
 
 .productive-img img {
@@ -200,11 +225,14 @@ nav a::after {
 #testimonial {
     display: flex;
     padding: 10vh 8vw;
+    flex-wrap: wrap;
 }
 
 .testi-row {
     background: var(--Dark-Blue-testimonials-background);
     margin: 1rem;
+    flex-basis: 300px;
+    flex-grow: 1;
     padding: 2rem 1rem;
     line-height: 1.5;
     box-shadow: 1px 6px 15px hsla(215, 52%, 9%, 0.534);
@@ -251,7 +279,9 @@ nav a::after {
 }
 
 #access {
-    margin: 5rem 20vw -6rem;
+    max-width: 1024px;
+    width: 80vw;
+    margin: 5rem 2vw -6rem;
     padding: 3rem;
     background: var(--Dark-Blue-intro-and-email-sign-up-background);
     line-height: 1.5;
@@ -267,27 +297,29 @@ form h1 {
 
 .inputs {
     width: 100%;
-    height: 10rem;
     display: flex;
     margin-top: 1rem;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
-.email, #email {
+.email,
+#email {
     width: 100%;
     padding: 1em;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
     border-radius: 40px;
     border: none;
 }
 
-.email{
+.email {
     text-align: left;
 }
 
-#error{
+#error {
     color: var(--Light-Red);
-    padding:  1rem;
+    display: none;
+    padding: 1rem;
 }
 
 #email:focus {
@@ -295,13 +327,16 @@ form h1 {
 }
 
 #submit {
-    width: 40%;
+    width: 100%;
     padding: 1.2em 2rem;
     margin-top: 12px;
     border-radius: 40px;
     border: none;
     color: var(--White);
     background: linear-gradient(to right, var(--Cyan), var(--Blue));
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 footer {
@@ -311,14 +346,17 @@ footer {
 
 .footer-main {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1.8fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
-.footer-main div {
+.footer-main>div {
+    flex-basis: 200px;
     display: flex;
-    /* width: 20%; */
+    flex-grow: 1;
+    width: 100%;
     flex-direction: column;
     font-size: 14px;
     line-height: 1.5;
@@ -327,6 +365,7 @@ footer {
 
 #location {
     display: block;
+    flex-basis: 300px;
     flex-direction: row;
 }
 
@@ -344,25 +383,38 @@ div.socials {
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
-.socials img {
-    /* width: 100%; */
-    height: 1rem;
-    padding: .8rem;
+.socials span {
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    object-fit: cover;
     border: 1px solid white;
     border-radius: 50%;
+    margin: 0 .4rem;
 }
 
-#location{
+span img {
+    width: 100%;
+    height: 100%;
+}
+
+#location {
     display: flex;
     align-items: flex-start;
+    position: relative;
 }
 
-#location-img{
+#location-img {
     padding: 0;
+    width: 2rem;
+    position: absolute;
+    left: 0;
 }
 
-#contact p{
+
+#contact p {
     line-height: 1.5;
 }
