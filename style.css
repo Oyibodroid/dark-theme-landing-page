@@ -25,7 +25,7 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
@@ -37,7 +37,9 @@ header {
 }
 
 #logo-cnt {
-    width: 8rem;
+    /* width: 8vw; */
+    max-width: 10rem;
+    width: 5rem;
 }
 
 #logo-cnt img {
@@ -70,7 +72,7 @@ nav a::after {
     transition: width .4s;
 }
 
-nav a:hover::after{
+nav a:hover::after {
     width: 100%;
 }
 
@@ -127,8 +129,7 @@ nav a:hover::after{
 }
 
 .about {
-    padding: 0 5vw;
-    margin: 0 5vw;
+    padding: 0 4vw;
     display: flex;
     flex-wrap: wrap;
     font-size: 14px;
@@ -144,7 +145,7 @@ nav a:hover::after{
     /* width: 30%; */
     flex-basis: 300px;
     text-align: center;
-    margin: 0 3rem;
+    margin: 0 1rem;
 }
 
 .abt-card img {
@@ -158,13 +159,15 @@ nav a:hover::after{
 #productive {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 10vh 0;
 }
 
 .productive-content {
-
-    margin: 1rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 1rem auto;
     line-height: 1.5;
 }
 
@@ -173,10 +176,6 @@ nav a:hover::after{
     font-size: 14px;
 }
 
-.productive-img {
-    flex-basis: 70%;
-    width: 50vw;
-}
 
 .productive-img img {
     width: 100%;
@@ -184,13 +183,18 @@ nav a:hover::after{
 
 .productive-content h1 {
     font-size: 2rem;
-    padding-right: 40%;
+    position: relative;
 }
 
 .productive-content h1::after {
     content: '';
-    height: 2px;
-    width: 50%;
+    width: 2px;
+    height: 2rem;
+    margin-left: 5px;
+    position: absolute;
+    /* left: 0%; */
+    bottom: 6%;
+    margin-bottom: 0;
     background-color: var(--Cyan);
     border: 1px solid var(--Cyan);
 }
@@ -199,7 +203,6 @@ nav a:hover::after{
     color: var(--Cyan);
     line-height: 1.5;
     display: flex;
-    /* font-size: 14px; */
     align-items: center;
     text-decoration: none;
     position: relative;
@@ -224,6 +227,9 @@ nav a:hover::after{
 
 #testimonial {
     display: flex;
+    max-width: 1500px;
+    width: 100%;
+    margin: 0 auto;
     padding: 10vh 8vw;
     flex-wrap: wrap;
 }
@@ -279,7 +285,7 @@ nav a:hover::after{
 }
 
 #access {
-    max-width: 1024px;
+    max-width: 750px;
     width: 80vw;
     margin: 5rem 2vw -6rem;
     padding: 3rem;
@@ -300,13 +306,14 @@ form h1 {
     display: flex;
     margin-top: 1rem;
     flex-wrap: wrap;
+    position: relative;
     align-items: flex-start;
 }
 
 .email,
 #email {
     width: 100%;
-    padding: 1em;
+    padding: .7em;
     /* margin-right: 1rem; */
     border-radius: 40px;
     border: none;
@@ -319,24 +326,33 @@ form h1 {
 #error {
     color: var(--Light-Red);
     display: none;
-    padding: 1rem;
+    position: absolute;
+    bottom: -100%;
+    left: 1%;
 }
 
 #email:focus {
     outline: none;
 }
 
+img,
+svg {
+    vertical-align: top;
+}
+
 #submit {
-    width: 100%;
-    padding: 1.2em 2rem;
-    margin-top: 12px;
-    border-radius: 40px;
+    background-color: transparent;
     border: none;
-    color: var(--White);
-    background: linear-gradient(to right, var(--Cyan), var(--Blue));
-    display: flex;
-    justify-content: center;
-    white-space: nowrap;
+    position: absolute;
+    right: 7px;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    width: 3rem;
+    height: 3rem;
+}
+
+#submit img {
+    width: 100%;
 }
 
 footer {

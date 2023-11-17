@@ -1,6 +1,5 @@
 const form = document.forms['access'];
 
-console.log(form)
 
 form.addEventListener('submit', e => {
     e.preventDefault()
@@ -10,12 +9,15 @@ form.addEventListener('submit', e => {
 
     if (email.value === "") {
         error.innerHTML = 'please enter a valid email address'
+        error.style.display = 'block'
     } else if (!email.value.includes('@') || !email.value.includes('.com')){
-        error.innerHTML = 'please enter a valid email address'
+        error.innerHTML = `email must contain "@", ".com"`;
+        error.style.display = 'block'
     }else{
-        error.innerHTML = ""   
-        submit();
+        error.innerHTML = ""
+        error.style.display = 'none'
     }
+    
+   
 })
 
-console.log(email);
